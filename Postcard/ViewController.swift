@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         
     }
 
+    
     /* GIT COMMANDS */
     
     /*
@@ -74,11 +75,17 @@ class ViewController: UIViewController {
     Adding Proj to Git:
 
     Terminal > open project folder
-    git add .
-    git commit -m "first rev"
-    git push -u origin master
+    
+    git add . - stages your changes for the next commit.
+    
+    git commit -m "messageName" - commit the staged files to the the repository with the message: messageName.
+    
+    git remote add origin https://github.com/userName/nameOfRepository - Sets up our local repository to be pushed to our github repository. We set our remote name to origin and a repository URL after.
+    
+    git push -u origin master - The push command tells git where to put our commited files. Origin is the name of our remote and the default branch we'll be using is master. The -u tells git to remember the parameters.
     
     */
+    
     
     
 }
