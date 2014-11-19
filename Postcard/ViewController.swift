@@ -86,7 +86,11 @@ class ViewController: UIViewController {
     
     */
     
-    
+    /*
+    Export Proj from Git:
+    Git clone https://github.com/userName/repositoryName
+
+    */
     
 }
 
