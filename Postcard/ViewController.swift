@@ -66,7 +66,17 @@ class ViewController: UIViewController {
 
     rm fileName - removes the file named fileName. Be careful with this, since it won't move our file to the trash. It will permenantely delete it!
 
-    rm -rf fileName - removes directory 
+    rm -rf fileName - removes directory
+    
+    */
+    
+    /*
+    Adding Proj to Git:
+
+    Terminal > open project folder
+    git add .
+    git commit -m "first rev"
+    git push -u origin master
     
     */
     
