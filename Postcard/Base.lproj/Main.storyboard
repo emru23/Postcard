@@ -38,21 +38,6 @@
                                     <rect key="frame" x="16" y="308" width="335" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EY4-Bl-rTn">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Send Message">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="366" width="335" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="sendMailButtonPressed:" destination="JBe-dy-aGr" eventType="touchUpInside" id="JEb-t2-0dv"/>
-                                </connections>
-                            </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhX-6y-a7h">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -62,6 +47,29 @@
                                     <rect key="frame" x="16" y="85" width="216" height="136"/>
                                 </variation>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgd-4Y-dNO">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="364" width="335" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EY4-Bl-rTn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send Message">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="423" width="335" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendMailButtonPressed:" destination="JBe-dy-aGr" eventType="touchUpInside" id="JEb-t2-0dv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -69,8 +77,9 @@
                                 <exclude reference="crt-2P-knN"/>
                                 <exclude reference="Z9f-yD-x93"/>
                                 <exclude reference="3ZW-RR-U8P"/>
-                                <exclude reference="EY4-Bl-rTn"/>
                                 <exclude reference="YhX-6y-a7h"/>
+                                <exclude reference="dgd-4Y-dNO"/>
+                                <exclude reference="EY4-Bl-rTn"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -78,8 +87,9 @@
                                 <include reference="crt-2P-knN"/>
                                 <include reference="Z9f-yD-x93"/>
                                 <include reference="3ZW-RR-U8P"/>
-                                <include reference="EY4-Bl-rTn"/>
                                 <include reference="YhX-6y-a7h"/>
+                                <include reference="dgd-4Y-dNO"/>
+                                <include reference="EY4-Bl-rTn"/>
                             </mask>
                         </variation>
                     </view>
@@ -88,6 +98,7 @@
                         <outlet property="mailButton" destination="EY4-Bl-rTn" id="d6A-yc-wda"/>
                         <outlet property="messageLabel" destination="YhX-6y-a7h" id="sCG-7K-kNI"/>
                         <outlet property="nameTextField" destination="Z9f-yD-x93" id="V64-s4-i1b"/>
+                        <outlet property="yourNameTextField" destination="dgd-4Y-dNO" id="lP5-sS-jxS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9W-26-JdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -154,6 +165,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcC-6g-ScR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-516" y="152"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dAc-xj-Oqm">
+            <objects>
+                <viewController id="UrC-Is-vy5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YeR-G9-hA1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z8G-C0-syX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BH6-c2-ZIV">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cRG-3T-2k4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
